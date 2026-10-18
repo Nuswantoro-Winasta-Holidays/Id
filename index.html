@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO. Nuswantoro Winasta Holidays | PT. Hanasta Esta Mandiri</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#38bdf8', // Biru Muda
+                        secondary: '#0284c7',
+                        darkText: '#1e293b',
+                        lightBg: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-silhouette {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.92), rgba(224, 242, 254, 0.85)), url('https://i.imgur.com/TBBucIc.jpeg');
+            background-size: 400px;
+            background-repeat: repeat;
+            background-position: center;
+        }
+        #welcome-screen {
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+    </style>
+</head>
+<body class="bg-lightBg text-darkText font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- WELCOME SCREEN -->
+    <div id="welcome-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
+        <div class="text-center px-4 animate-bounce">
+            <img src="https://i.imgur.com/TBBucIc.jpeg" alt="Logo NWH" class="w-32 h-32 mx-auto rounded-full shadow-2xl object-cover border-4 border-primary mb-6">
+            <h1 class="text-2xl md:text-4xl font-extrabold text-slate-800 tracking-wide mb-2">PO. NUSWANTORO WINASTA HOLIDAYS</h1>
+            <p class="text-sky-600 font-medium tracking-widest text-sm md:text-base">PT. HANASTA ESTA MANDIRI</p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-sky-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <img src="https://i.imgur.com/TBBucIc.jpeg" alt="Logo" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-primary">
+                <div>
+                    <span class="block font-bold text-base md:text-lg leading-tight text-slate-900">Nuswantoro Winasta</span>
+                    <span class="block text-xs font-semibold text-sky-600 tracking-wider">H O L I D A Y S</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700">
+                <a href="#tentang" class="hover:text-primary transition">Tentang</a>
+                <a href="#layanan" class="hover:text-primary transition">Layanan</a>
+                <a href="#fasilitas" class="hover:text-primary transition">Fasilitas Bus</a>
+                <a href="#partner" class="hover:text-primary transition">Partner</a>
+                <a href="#syarat" class="hover:text-primary transition">Member</a>
+                <a href="#gallery" class="hover:text-primary transition">Gallery</a>
+                <a href="#reservasi" class="px-5 py-2.5 rounded-full bg-primary text-white font-semibold shadow-md shadow-sky-200 hover:bg-sky-500 transition">Reservasi</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-700 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-sky-100 px-6 py-4 space-y-3 font-medium text-slate-700">
+            <a href="#tentang" class="block hover:text-primary">Tentang</a>
+            <a href="#layanan" class="block hover:text-primary">Layanan</a>
+            <a href="#fasilitas" class="block hover:text-primary">Fasilitas Bus</a>
+            <a href="#partner" class="block hover:text-primary">Partner</a>
+            <a href="#syarat" class="block hover:text-primary">Member</a>
+            <a href="#gallery" class="block hover:text-primary">Gallery</a>
+            <a href="#reservasi" class="block text-center py-2 rounded-lg bg-primary text-white font-semibold">Reservasi</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-silhouette py-24 md:py-36 border-b border-sky-100">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="inline-block p-2 bg-sky-100 rounded-2xl shadow-inner mb-6">
+                <img src="https://i.imgur.com/TBBucIc.jpeg" alt="Logo NWH" class="w-28 h-28 rounded-xl object-cover shadow-lg mx-auto">
+            </div>
+            <h1 class="text-3xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
+                PO. NUSWANTORO WINASTA HOLIDAYS
+            </h1>
+            <p class="text-lg md:text-xl font-semibold text-sky-700 mb-6">PT. Hanasta Esta Mandiri</p>
+            <p class="text-base md:text-lg text-slate-600 italic max-w-2xl mx-auto bg-white/85 backdrop-blur-sm py-3 px-6 rounded-full shadow-sm border border-sky-100">
+                "Serving Your Travelink Across Nusantara"
+            </p>
+        </div>
+    </section>
+
+    <!-- TENTANG / SEJARAH -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Sejarah & Profil PO</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="bg-sky-50/60 p-8 rounded-3xl border border-sky-100 shadow-sm leading-relaxed text-slate-700 text-justify text-base md:text-lg">
+                <p class="mb-4">
+                    <strong>PO. Nuswantoro Winasta Holidays</strong> di bawah naungan resmi <strong>PT. Hanasta Esta Mandiri</strong> lahir dan berdiri sejak tanggal <strong>12 September 2025</strong>. Berawal dari visi besar untuk menghadirkan layanan transportasi pariwisata yang elegan, aman, dan berstandar tinggi di kancah nusantara.
+                </p>
+                <p>
+                    Dengan komitmen pelayanan prima, kru berpengalaman, serta armada berfasilitas mewah, kami siap mengantar setiap perjalanan wisata, ziarah, maupun agenda korporasi Anda dengan kenyamanan paripurna.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN PARIWISATA -->
+    <section id="layanan" class="py-20 bg-silhouette">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Layanan Pariwisata</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Ziarah -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shadow-inner">
+                                <i class="fa-solid fa-mosque"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Ziarah</h3>
+                        </div>
+                        <div id="desc-ziarah" class="hidden text-slate-600 text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Perjalanan religi ziarah wali dan tempat suci dengan kenyamanan ekstra, armada prima, serta pendampingan perjalanan yang khidmat dan terorganisir.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('ziarah')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Study Tour -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shadow-inner">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Study Tour</h3>
+                        </div>
+                        <div id="desc-study" class="hidden text-slate-600 text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Solusi perjalanan edukasi sekolah dan kampus dengan armada aman, tepat waktu, serta fasilitas penunjang kegiatan belajar di luar kelas yang menyenangkan.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('study')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Family Gathering -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shadow-inner">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Family Gathering</h3>
+                        </div>
+                        <div id="desc-family" class="hidden text-slate-600 text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Momen kebersamaan keluarga besar atau instansi menjadi lebih hangat dan berkesan dengan akomodasi bus pariwisata berfasilitas hiburan lengkap.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('family')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Outbound -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shadow-inner">
+                                <i class="fa-solid fa-person-hiking"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Outbound</h3>
+                        </div>
+                        <div id="desc-outbound" class="hidden text-slate-600 text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Antar jemput peserta outbound menuju lokasi petualangan alam terbuka dengan bagasi luas untuk perlengkapan dan tim yang solid.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('outbound')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Kunjungan Industri -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shadow-inner">
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Kunjungan Industri</h3>
+                        </div>
+                        <div id="desc-industri" class="hidden text-slate-600 text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Akomodasi profesional untuk kunjungan kerja instansi maupun mahasiswa ke berbagai pusat industri dan instansi pemerintahan.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('industri')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Hajatan -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shadow-inner">
+                                <i class="fa-solid fa-champagne-glasses"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Hajatan</h3>
+                        </div>
+                        <div id="desc-hajatan" class="hidden text-slate-600 text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Layanan sewa bus khusus untuk keperluan mengantar rombongan hajatan keluarga, pernikahan, maupun acara adat dengan ketepatan waktu tinggi.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('hajatan')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASILITAS BUS -->
+    <section id="fasilitas" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Fasilitas Bus</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Crew Ramah -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Crew Ramah & Berpengalaman</h3>
+                        </div>
+                        <div id="desc-crew" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Driver dan tour crew yang profesional, ramah, menguasai rute perjalanan dengan baik, serta mengutamakan keselamatan penumpang.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('crew')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- USB Charger -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Usb Charger</h3>
+                        </div>
+                        <div id="desc-usb" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Tersedia port pengisian daya baterai di setiap kursi untuk memastikan gadget Anda tetap aktif selama perjalanan.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('usb')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Legrest -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-couch"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Legrest</h3>
+                        </div>
+                        <div id="desc-legrest" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Sandaran kaki empuk dan ergonomis yang membuat posisi duduk semakin rileks saat perjalanan jauh.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('legrest')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Seat Jumbo -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-chair"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Seat Jumbo By Rimba Kencana</h3>
+                        </div>
+                        <div id="desc-seat" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Kursi berukuran jumbo produksi Rimba Kencana yang empuk, luas, dan dilengkapi recliner berkualitas tinggi.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('seat')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Dispenser -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-glass-water"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Dispenser</h3>
+                        </div>
+                        <div id="desc-dispenser" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Fasilitas air minum siap saji untuk menjaga kesegaran Anda sepanjang perjalanan.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('dispenser')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Karaoke, TV -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-tv"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Karaoke, Tv</h3>
+                        </div>
+                        <div id="desc-karaoke" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Sistem hiburan layar TV LED jernih dan fasilitas karaoke interaktif untuk menceriakan suasana rombongan di dalam bus.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('karaoke')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Lampu Variasi -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Lampu Variasi</h3>
+                        </div>
+                        <div id="desc-lampu" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Pencahayaan interior kabin bus elegan dengan lampu variasi modern yang menambah kesan mewah dan cozy.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('lampu')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Sound JBL -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Sound JBL</h3>
+                        </div>
+                        <div id="desc-sound" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Kualitas audio menggelegar dan jernih berkat perangkat sound system berstandar JBL.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('sound')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Bagasi Luas -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-suitcase-rolling"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Bagasi Luas</h3>
+                        </div>
+                        <div id="desc-bagasi" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Kapasitas lambung bagasi yang luas dan tembus, mampu menampung koper serta barang bawaan rombongan dalam jumlah banyak.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('bagasi')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNER -->
+    <section id="partner" class="py-20 bg-silhouette">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Official Partner</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl shadow-inner">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="font-bold text-lg md:text-xl text-slate-850">Wirasatya Tour & Travel Sebagai Tour Leader</h3>
+                    </div>
+                    <div id="desc-partner" class="hidden text-slate-600 text-sm md:text-base mb-6 bg-sky-50 p-4 rounded-2xl transition-all">
+                        Kolaborasi strategis bersama Wirasatya Tour & Travel untuk menghadirkan pemandu wisata (Tour Leader) yang berpengalaman, komunikatif, serta siap memandu perjalanan Anda dari awal hingga akhir dengan pelayanan terbaik.
+                    </div>
+                </div>
+                <button onclick="toggleAccordion('partner')" class="w-full py-3 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm">
+                    <span>Lihat Penjelasan Partner</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYARAT JADI MEMBER -->
+    <section id="syarat" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Syarat Jadi Member</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bersikap Dewasa -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Bersikap Dewasa</h3>
+                        </div>
+                        <div id="desc-dewasa" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Mengutamakan etika, kebijaksanaan, serta tidak mudah terpancing emosi dalam berinteraksi di dalam komunitas.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('dewasa')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Minimal Usia 13+ -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Minimal Usia 13+</h3>
+                        </div>
+                        <div id="desc-usia" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Batasan usia minimal bagi calon member agar memiliki kematangan pola pikir yang sejalan dengan visi komunitas.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('usia')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Tidak Ada Riwayat Galer -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Tidak Ada Riwayat Galer</h3>
+                        </div>
+                        <div id="desc-galer" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Bersih dari rekam jejak membuat kegaduhan, drama, atau masalah negatif di grup/komunitas lain.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('galer')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Tidak Kutlon / Kutu Loncat -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-anchor"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Tidak Kutlon / Kutu Loncat</h3>
+                        </div>
+                        <div id="desc-kutlon" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Memiliki komitmen loyal dan tidak suka berpindah-pindah PO/grup dalam waktu singkat.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('kutlon')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Menjaga Nama Baik PO -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Bisa Menjaga Nama Baik Po</h3>
+                        </div>
+                        <div id="desc-nama" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Setiap member adalah representasi resmi PO, sehingga wajib menjaga integritas dan marwah PO di manapun berada.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('nama')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Memahami Photo Editor -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Wajib Memahami Apk Photo Editor</h3>
+                        </div>
+                        <div id="desc-photo" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Menguasai dasar-dasar aplikasi pengeditan foto untuk mendukung kebutuhan visual dan kreasi konten member.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('photo')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Edit Livery -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-paintbrush"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Bisa Edit Livery [Wajib]</h3>
+                        </div>
+                        <div id="desc-livery" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Keahlian mutlak (wajib) dalam merancang dan mengedit desain livery bus sesuai standar estetika PO NWH.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('livery')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Bisa SS -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Bisa Ss [Wajib]</h3>
+                        </div>
+                        <div id="desc-ss" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Kemampuan mengambil screenshot (SS) game atau visual dengan angle, pencahayaan, dan komposisi yang estetik [Wajib].
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('ss')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Bisa Cinematic -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-clapperboard"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Bisa Cinematic [Wajib]</h3>
+                        </div>
+                        <div id="desc-cinematic" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Terampil memproduksi video cinematic bus yang menarik dan estetik sebagai media promosi kreatif PO [Wajib].
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('cinematic')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Wajib Nimbrung -->
+                <div class="bg-sky-50/50 p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-sky-600 flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-800">Wajib Nimbrung</h3>
+                        </div>
+                        <div id="desc-nimbrung" class="hidden text-slate-600 text-sm mb-4 bg-white p-3 rounded-xl shadow-inner transition-all">
+                            Aktif berinteraksi, meramaikan suasana grup, dan tidak menjadi member pasif atau "akun hantu".
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('nimbrung')" class="w-full py-2.5 bg-white text-sky-700 font-semibold rounded-xl shadow-sm hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-sm border border-sky-100">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASILITAS GROUP -->
+    <section id="fasi-group" class="py-20 bg-silhouette">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Fasilitas Group</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Admin Ramah -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base shadow-inner">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-800">Admin Ramah</h3>
+                        </div>
+                        <div id="desc-admin" class="hidden text-slate-600 text-xs md:text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Jajaran admin yang fast response, supel, dan selalu siap membimbing member baru dengan penuh keramahan.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('admin')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-xs md:text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Assets Group -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base shadow-inner">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-800">Assets Group</h3>
+                        </div>
+                        <div id="desc-assets" class="hidden text-slate-600 text-xs md:text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Koleksi aset lengkap mulai dari template, font, logo HD, hingga berbagai keperluan desain eksklusif member.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('assets')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-xs md:text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Stiker Team -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base shadow-inner">
+                                <i class="fa-solid fa-note-sticky"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-800">Stiker Team</h3>
+                        </div>
+                        <div id="desc-stiker" class="hidden text-slate-600 text-xs md:text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Berbagai paket stiker WhatsApp keren khas tim NWH untuk meramaikan obrolan sehari-hari.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('stiker')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-xs md:text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+                <!-- Assistance Bot -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-base shadow-inner">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-800">Assistance Bot</h3>
+                        </div>
+                        <div id="desc-bot" class="hidden text-slate-600 text-xs md:text-sm mb-4 bg-sky-50 p-3 rounded-xl transition-all">
+                            Bot grup otomatis yang membantu pengaturan, informasi, serta hiburan interaktif di dalam grup WhatsApp.
+                        </div>
+                    </div>
+                    <button onclick="toggleAccordion('bot')" class="w-full py-2.5 bg-sky-50 text-sky-700 font-semibold rounded-xl hover:bg-primary hover:text-white transition flex items-center justify-center gap-2 text-xs md:text-sm">
+                        <span>Lihat Penjelasan</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY BUS -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-4xl font-bold text-slate-900">Gallery Bus NWH</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/e4vk5xb.jpeg" alt="Gallery 1" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/KvKRpht.jpeg" alt="Gallery 2" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/2wxbpGB.jpeg" alt="Gallery 3" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/oVsGXff.jpeg" alt="Gallery 4" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/oqaSoRR.jpeg" alt="Gallery 5" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/1dec3t5.jpeg" alt="Gallery 6" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/6qngmOV.jpeg" alt="Gallery 7" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/0K4aCKn.jpeg" alt="Gallery 8" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group">
+                    <img src="https://i.imgur.com/UneyR4L.jpeg" alt="Gallery 9" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-sm border border-sky-100 bg-sky-50 group sm:col-span-2 lg:col-span-3 max-w-md mx-auto w-full">
+                    <img src="https://i.imgur.com/jaYQ4Sw.jpeg" alt="Gallery 10" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOR RESERVATION & CONTACT -->
+    <section id="reservasi" class="py-20 bg-silhouette border-t border-sky-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-4xl font-bold text-slate-900 mb-4">For Reservation & Join</h2>
+            <p class="text-slate-600 mb-8">Bisa Click Link Ini Untuk Info Lebih Lanjut atau Hubungi Admin Kami</p>
+            
+            <div class="mb-8">
+                <a href="https://chat.whatsapp.com/H8gyugmnG4gL0BSBrsFAwf?s=cl&p=a&mlu=4&ilr=4" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 text-white font-bold rounded-2xl shadow-lg shadow-emerald-200 hover:bg-emerald-600 transition text-base md:text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Gabung Grup WhatsApp Resmi NWH
+                </a>
+            </div>
+
+            <div class="text-sm text-slate-500 mb-6 font-medium">Jika Link Di Atas Eror Bisa Hubungi Admin:</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
+                <a href="https://wa.me/6287778537350?text=Assalamualaikum%20Min.%20Saya%20Mau%20Join%20Ke%20Po%20Nwh%20Min." target="_blank" class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 hover:border-primary transition flex flex-col items-center">
+                    <div class="w-12 h-12 bg-sky-100 text-primary rounded-full flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <span class="font-bold text-slate-800 text-lg mb-1">Admin 1</span>
+                    <span class="text-sky-600 font-semibold mb-3">+62 877-7853-7350</span>
+                    <span class="inline-block px-4 py-2 bg-sky-50 text-sky-700 text-xs font-semibold rounded-full">Kirim Pesan WhatsApp</span>
+                </a>
+
+                <a href="https://wa.me/6289674077204?text=Assalamualaikum%20Min.%20Saya%20Mau%20Join%20Ke%20Po%20Nwh%20Min." target="_blank" class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 hover:border-primary transition flex flex-col items-center">
+                    <div class="w-12 h-12 bg-sky-100 text-primary rounded-full flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <span class="font-bold text-slate-800 text-lg mb-1">Admin 2</span>
+                    <span class="text-sky-600 font-semibold mb-3">+62 896-7407-7204</span>
+                    <span class="inline-block px-4 py-2 bg-sky-50 text-sky-700 text-xs font-semibold rounded-full">Kirim Pesan WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="p-4 bg-red-50 border border-red-200 rounded-2xl text-red-600 font-bold text-xs md:text-sm tracking-wide">
+                ⚠️ ADMIN TIDAK AKAN MEMBALAS PESAN ANDA, JIKA ANDA MELAKUKAN SPAM. ⚠️
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-8 border-t border-sky-100 text-center text-slate-600 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold text-slate-800 mb-1">PO. Nuswantoro Winasta Holidays</p>
+            <p class="text-xs text-sky-600 font-medium mb-3">PT. Hanasta Esta Mandiri</p>
+            <p class="text-xs text-slate-400">&copy; 2025 - 2026 Nuswantoro Winasta Holidays. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        window.addEventListener('load', () => {
+            const welcomeScreen = document.getElementById('welcome-screen');
+            setTimeout(() => {
+                welcomeScreen.style.opacity = '0';
+                setTimeout(() => {
+                    welcomeScreen.style.display = 'none';
+                }, 800);
+            }, 1800);
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleAccordion(id) {
+            const el = document.getElementById('desc-' + id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
